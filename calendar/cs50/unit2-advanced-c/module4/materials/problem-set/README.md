@@ -24,7 +24,7 @@ After signing in, you will see each component as an assignment on the left. You 
 
 You can also use check50 to check the correctness of your code before submitting. Unfortunately, you won't be able to use check50 on whodunit.c, but you should know when your image is clear enough to see the "verdict". 
 
-If you forget how to use Vocaruem, please refer to the <a href="https://docs.google.com/document/d/19HIMxU_RtVV0PcGpuL71KmAoQh-KTgyPGpWWLcmwo58/edit?usp=sharing" target="_blank">Student Guide</a> section about Vocaruem.
+If you forget how to use Vocaruem, please refer to the Student Guide section about Vocaruem.
 
 ### Get Started
 Start working on the <a href="http://cdn.cs50.net/2015/fall/psets/4/pset4/pset4.html#getting_ready" target="_blank">Problem Set 4 Spec</a>. You may have seen some of these videos already, but feel free to review them if you want a refresher. Go get em jaguar!
