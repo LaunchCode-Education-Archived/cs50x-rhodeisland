@@ -10,7 +10,7 @@ baseUrl: http://education.launchcode.org/cs50x-rhodeisland
 # Used to link to the GitHub project
 github:
     user: LaunchCodeEducation 
-    repo: cs50x-rhodeisland 
+    repo: cs50x-rhodeisland
 
 title: LaunchCode's CS50x - Rhode Island
 
