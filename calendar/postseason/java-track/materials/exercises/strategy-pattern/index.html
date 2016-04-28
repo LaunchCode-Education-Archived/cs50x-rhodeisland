@@ -69,109 +69,33 @@
 
                 
                 <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
-                    <h5><a href="../../">Java Track</a></h5>
-<h1 id="class-4-prep">Class 4 Prep</h1>
-<p>Before coming to <a href="../class4">Class 4</a>, please complete the following tasks:</p>
-<h4 id="inheritance">Inheritance</h4>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Resource Type</th>
-<th>Link</th>
-<th>Instructions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Watch</td>
-<td>Follow Along</td>
-<td>Lions and Tigers and Bears, oh my!</td>
-<td>Follow along with Doug as he explains inheritance while creating a zoo.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html">Java Documentation on Inheritance</a></td>
-<td>The official Java documentation on inheritance is a useful reference.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html">Polymorphism</a></td>
-<td>A great explanation of Polymorphism and why it is useful.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="http://www.javaworld.com/article/2076814/core-java/inheritance-versus-composition--which-one-should-you-choose-.html">Inheritance vs. Composition</a></td>
-<td>A great blog post that tries to illustrate when you should use composition or inheritance to solve a problem.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html">Access Modifiers</a></td>
-<td>More information about access modifiers in Java. Pay special attention to the protected keyword.</td>
-</tr>
-<tr>
-<td>Do</td>
-<td>Exercise</td>
-<td>Robotic Diversification</td>
-<td>Robots are good for many different things. When you complete this exercise you will be able to create robots that can perform just about any activity.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h4 id="guis">GUIs</h4>
-<table>
-<thead>
-<tr>
-<th>Task</th>
-<th>Resource Type</th>
-<th>Link</th>
-<th>Instructions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Watch</td>
-<td>Follow Along</td>
-<td>Creating GUIs</td>
-<td>Create a GUI for the Computer class with Doug.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="http://www3.ntu.edu.sg/home/ehchua/programming/java/j4a_gui.html">GUI Tutorial</a></td>
-<td>This is a very detailed tutorial that explains the different components of a GUI as well as how to create them.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="http://docs.oracle.com/javase/tutorial/uiswing/">Swing Documentation</a></td>
-<td>This set of tutorials will be a great reference when you start building your own GUIs.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="https://eclipse.org/windowbuilder/documentation.php">Windowbuilder Documentation</a></td>
-<td>This documenation is for the Windowbuilder GUI designer in Eclipse. Probably not something you want to read all at once, but a great reference to use while you're coding.</td>
-</tr>
-<tr>
-<td>Read</td>
-<td>Resource</td>
-<td><a href="http://bokardo.com/principles-of-user-interface-design/">Principles of Good Interface Design</a></td>
-<td>A great resource for things you should consider when designing and implementing your user interface.</td>
-</tr>
-<tr>
-<td>Do</td>
-<td>Exercise</td>
-<td>Robotic Interaction</td>
-<td>Create a fancy user interface for interacting with your robots</td>
-</tr>
-</tbody>
-</table>
-<h4 id="now-youre-ready-for">Now you're ready for <a href="../class4">Class 4</a></h4>
+                    <h5 id="java-track">Java Track</h5>
+<p><a href="../../class5-prep">Back to Class 5 prep</a></p>
+<h1 id="exercise-strategy-pattern">Exercise: Strategy Pattern</h1>
+<p>Now that you know about inheritance and interfaces, you are ready to enter the world of <a href="https://sourcemaking.com/design_patterns">Design Patterns</a>. Design patterns are repeatable solutions to commonly occuring situations. The pattern we are going to look at today is called the <a href="https://sourcemaking.com/design_patterns/strategy">Strategy Pattern</a></p>
+<p>The Strategy pattern is useful when you have multiple ways of implementing the same behavior. In this exercise, we are going to implement behavior for our robots.</p>
+<p>In previous exercises you made <a href="../robot-diversification">different types of robots</a>. Now that you have types of robots, consider a goal for your robots to achieve. Here are some ideas:</p>
+<ul>
+<li>If you made a robot that can push or lift something, your goal might be pushing or moving something to a certain position</li>
+<li>If you made an attack robot, your goal might be destroying another robot.</li>
+</ul>
+<p>Regardless of the goal you chose, there will likely be multiple ways of achieving the goal. For example, if you are designing an attack robot, you might want to only have your robot attack if the other robot gets too close. Or maybe you want your robots to be more aggressive and chase other robots around. Or perhaps you'd rather build a defensive robot that only attacks if it is provoked by another robot. All of these are different <em>strategies</em> that could be implemented for an attack robot.</p>
+<p>To create your strategies, do the following:</p>
+<ul>
+<li>Create an interface called <code>RobotBehavior</code>. The methods in this interface are ultimately up to you, but there should be at least one method in this interface called <code>doNextMove()</code>. Think about what the return type of this method should be!</li>
+<li>Create at least two classes that implement this interface. If I were developing attack robots, I might call one class <code>AggressiveBehavior</code> and another class <code>DefensiveBehavior</code></li>
+<li>Implement the methods in each of these classes with the desired behavior. If you do not have enough information to implement the desired behavior, you may wish to add some parameters to your <code>doNextMove()</code> method (such as a <code>Robot</code> instance) or create additional methods.</li>
+<li>In your <code>Robot</code> base class, create a <code>setBehavior(RobotBehavior)</code> method that accepts a behavior for your <code>Robot</code>.</li>
+</ul>
+<p>You are now ready to try out your strategies! In a <code>main</code> method (or some other appropriate method). Do the following:</p>
+<ul>
+<li>Create a <code>Robot</code></li>
+<li>Create one of your strategies and set it with <code>setBehavior()</code></li>
+<li>Repeat this process for a second robot</li>
+<li>Create a loop that continuously calls <code>doNextMove()</code> for both robots and then prints out their information</li>
+<li>End the loop when one or both <code>Robots</code> achieves its goal</li>
+</ul>
+<p>Congratulations, you have just completed your first design pattern! You have also completed your first <a href="https://en.wikipedia.org/wiki/Artificial_intelligence">Artificial Intelligence</a> exercise! I hope your robots don't become sentient and <a href="https://www.youtube.com/watch?v=TQs3gVobcfg">take over the world</a>.</p>
                 </section>
 
             </div>
