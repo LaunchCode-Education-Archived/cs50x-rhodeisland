@@ -13,6 +13,6 @@ So without further ado, let the learning begin!
 ### Steps
 Class # | Date | Before Class | During Class | Topics/Skills
 :------:|:---|:------------:|:------------:|-----------------------|
-Class 0 | 5/5 | [Prep Work](./materials/class0-prep) | [In Class](./materials/class0) | binary, ascii, algorithms, pseudocode, Scratch
+Class 0 | 5/9 | [Prep Work](./materials/class0-prep) | [In Class](./materials/class0) | binary, ascii, algorithms, pseudocode, Scratch
 
 
